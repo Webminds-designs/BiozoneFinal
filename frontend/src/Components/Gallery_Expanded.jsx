@@ -41,6 +41,9 @@ import Img35 from "../Assest/Web_Images/35.jpg";
 import Img36 from "../Assest/Web_Images/36.jpg";
 import Img37 from "../Assest/Web_Images/37.jpg";
 import Img38 from "../Assest/Web_Images/38.jpg";
+import Img39 from "../Assest/Web_Images/39.jpg";
+import Img40 from "../Assest/Web_Images/40.jpg";
+import Img41 from "../Assest/Web_Images/41.jpg";
 
 import content from "../content/galleryContent";
 import { SecondaryButton } from "./Elements/Buttons";
@@ -963,6 +966,71 @@ export default function App() {
 										/>
 									</PhotoView>
 								</motion.div>
+								{/* 39 */}
+								<motion.div
+									ref={gridRef1}
+									className={`relative lg:h-[35vh]  bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-xl overflow-hidden col-span-3 ${
+										hoveredIndex !== null && hoveredIndex !== 0 ? "blur-sm" : ""
+									}`}
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.1 }}
+									viewport={{ once: true, amount: 0.1 }}
+									onMouseEnter={() => setHoveredIndex(0)}
+									onMouseLeave={() => setHoveredIndex(null)}
+								>
+									<PhotoView src={Img39}>
+										<img
+											src={Img39}
+											alt="image1"
+											className="absolute object-cover w-full h-AUTO -top-5"
+										/>
+									</PhotoView>
+								</motion.div>
+
+								{/* 40 */}
+								<motion.div
+									className={`relative lg:h-[35vh]  bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-xl overflow-hidden col-span-1 ${
+										hoveredIndex !== null && hoveredIndex !== 1 ? "blur-sm" : ""
+									}`}
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.2 }}
+									viewport={{ once: true, amount: 0.1 }}
+									onMouseEnter={() => setHoveredIndex(1)}
+									onMouseLeave={() => setHoveredIndex(null)}
+								>
+									<PhotoView src={Img40}>
+										<img
+											src={Img40}
+											alt="image1"
+											className="absolute object-cover w-full h-full bottom-0"
+										/>
+									</PhotoView>
+								</motion.div>
+
+								{/* 41 */}
+								<motion.div
+									ref={gridRef2}
+									className={`lg:h-[35vh] bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-xl overflow-hidden col-span-3 ${
+										hoveredIndex !== null && hoveredIndex !== 2 ? "blur-sm" : ""
+									}`}
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.3 }}
+									viewport={{ once: true, amount: 0.1 }}
+									onMouseEnter={() => setHoveredIndex(2)}
+									onMouseLeave={() => setHoveredIndex(null)}
+								>
+									<PhotoView src={Img41}>
+										<img
+											src={Img41}
+											alt="Grid 1"
+											className="object-cover w-full h-full"
+										/>
+									</PhotoView>
+								</motion.div>
+
 							</div>
 
 							{/* Mobile Gallery */}
@@ -1636,6 +1704,59 @@ export default function App() {
 										/>
 									</PhotoView>
 								</motion.div>
+						{/* 39 */}
+						<motion.div
+									ref={gridRef2}
+									className="h-[35vh] bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-[8px] overflow-hidden "
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.3 }}
+									viewport={{ once: true, amount: 0.1 }}
+								>
+									<PhotoView src={Img39}>
+										<img
+											src={Img39}
+											alt="Grid 1"
+											className="object-cover w-full h-full "
+										/>
+									</PhotoView>
+								</motion.div>
+
+								{/* 40 */}
+								<motion.div
+									className="h-[35vh] bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-[8px] overflow-hidden "
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.4 }}
+									viewport={{ once: true, amount: 0.1 }}
+								>
+									<PhotoView src={Img40}>
+										<img
+											src={Img40}
+											alt="Grid 1"
+											className="object-cover w-full h-full"
+										/>
+									</PhotoView>
+								</motion.div>
+
+								{/* 41 */}
+								<motion.div
+									className="h-[35vh] bg-gray-100 shadow ring-1 ring-inset ring-gray-200 rounded-[8px] "
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.5, delay: 0.9 }}
+									viewport={{ once: true, amount: 0.1 }}
+								>
+									<PhotoView src={Img41}>
+										<img
+											src={Img41}
+											alt="Grid 1"
+											className="object-cover w-full h-full rounded-xl"
+										/>
+									</PhotoView>
+								</motion.div>
+
+
 							</div>
 						</div>
 					</div>
