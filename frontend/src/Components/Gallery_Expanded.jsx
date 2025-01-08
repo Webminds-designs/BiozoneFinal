@@ -979,11 +979,11 @@ export default function App() {
 									onMouseEnter={() => setHoveredIndex(0)}
 									onMouseLeave={() => setHoveredIndex(null)}
 								>
-									<PhotoView src={Img39}>
+									<PhotoView src={Img40}>
 										<img
 											src={Img39}
 											alt="image1"
-											className="absolute object-cover w-full h-AUTO -top-5"
+											className="absolute object-cover w-full h-AUTO -top-56"
 										/>
 									</PhotoView>
 								</motion.div>
