@@ -31,7 +31,7 @@ const Navigation = ({ homeRef, locationsRef, galleryRef, contactRef }) => {
     localStorage.setItem("language", lang);
     console.log(`Language changed to: ${lang}`);
     document.documentElement.lang = lang;
-    navigate(`/home?lang=${lang}`);
+    navigate("/home");
   };
 
   // Handle toggling the menu
