@@ -12,6 +12,7 @@ import Map from "../Components/Map";
 import VortextComponent from "../Components/VortextComponent";
 import Text from "../Components/Elements/Text";
 import { SecondaryButton } from "../Components/Elements/Buttons"; // Import SecondaryButton
+import Video from "../Components/Video";
 
 const Home = () => {
 	// Define refs for each section
@@ -44,6 +45,9 @@ const Home = () => {
 			/>
 			<div ref={homeRef}>
 				<Landing mapref={locationsRef} />
+			</div>
+			<div>
+				<Video />
 			</div>
 			<div ref={locationsRef}>
 				<Map />
