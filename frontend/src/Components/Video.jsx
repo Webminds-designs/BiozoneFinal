@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { motion } from "framer-motion";
 
@@ -22,49 +21,77 @@ export default function Video() {
   }, []);
 
   useEffect(() => {
-      // Ensure only the middle video is auto-playing, others are paused
-      videoRefs.current.forEach((video, index) => {
-        if (video) {
-          const position = (index - currentIndex + videos.length) % videos.length;
-          if (position === 1) {
-            video.play();
+    // Create Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = videoRefs.current.findIndex(
+            (el) => el === entry.target
+          );
+          const position =
+            (index - currentIndex + videos.length) % videos.length;
+
+          if (entry.isIntersecting && position === 1) {
+            entry.target.play(); // Play only if it's the center video and in viewport
           } else {
-            video.pause();
+            entry.target.pause(); // Pause if it's not in viewport or not the center video
+            entry.target.currentTime = 0; // Reset to the beginning
           }
-        }
-      });
-      console.log("Current Index: ", currentIndex);
-    }, [currentIndex]);
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
 
-    const nextSlide = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    // Observe all videos
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        observer.observe(video);
+      }
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      if (observer) {
+        videoRefs.current.forEach((video) => {
+          if (video) {
+            observer.unobserve(video);
+          }
+        });
+        observer.disconnect();
+      }
     };
+  }, [currentIndex, videos.length]);
 
-    const prevSlide = () => {
-      setCurrentIndex((prevIndex) =>
-        (prevIndex - 1 + videos.length) % videos.length
-      );
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + videos.length) % videos.length
+    );
+  };
+
+  const getPositionStyles = (index) => {
+    const position = (index - currentIndex + videos.length) % videos.length;
+    const baseTranslateX = 350; // Distance between slides
+    const scale = position === 1 ? 1.2 : 0.8; // Larger for center video
+    const rotation = position === 1 ? 0 : position === 0 ? 30 : -30; // Rotate left/right
+    const translateX =
+      baseTranslateX * (position === 0 ? -1 : position === 2 ? 1 : 0); // Offset for left/right
+    const width = position === 1 ? "400px" : "250px"; // Larger for center video
+    const height = position === 1 ? "400px" : "500px"; // Larger for center video
+
+    return {
+      transform: `translateX(${translateX}px) scale(${scale}) rotateY(${rotation}deg)`,
+      zIndex: position === 1 ? 2 : 1,
+      opacity: position === 1 ? 1 : 0.5,
+      width: width,
+      height: height,
     };
+  };
 
-    const getPositionStyles = (index) => {
-      const position = (index - currentIndex + videos.length) % videos.length;
-      const baseTranslateX = 350; // Distance between slides
-      const scale = position === 1 ? 1.2 : 0.8; // Larger for center video
-      const rotation = position === 1 ? 0 : position === 0 ? 30 : -30; // Rotate left/right
-      const translateX = baseTranslateX * (position === 0 ? -1 : position === 2 ? 1 : 0); // Offset for left/right
-      const width = position === 1 ? "400px" : "250px"; // Larger for center video
-      const height = position === 1 ? "400px" : "500px"; // Larger for center video
-
-      return {
-          transform: `translateX(${translateX}px) scale(${scale}) rotateY(${rotation}deg)`,
-          zIndex: position === 1 ? 2 : 1,
-          opacity: position === 1 ? 1 : 0.5,
-          width: width,
-          height: height,
-      };
-    };
-
-  const currentContent = content[language];;
+  const currentContent = content[language];
 
   return (
     <div className="container relative mx-auto flex flex-col items-center justify-center h-screen mt-32 mb-10 w-screen">
@@ -86,7 +113,6 @@ export default function Video() {
 
       {/* video carousel */}
       <div className="container relative mx-auto mt-20 flex flex-col items-center justify-center h-screen w-screen">
-
         <motion.div
           className="relative flex items-center justify-center w-full h-[500px]"
           style={{ perspective: "1000px" }}
@@ -114,6 +140,7 @@ export default function Video() {
                   className="h-full w-full object-cover"
                   loop
                   muted
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -139,7 +166,6 @@ export default function Video() {
             {`0${currentIndex + 1} / 0${videos.length}`}
           </p>
         </div>
-
       </div>
     </div>
   );

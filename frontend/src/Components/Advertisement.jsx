@@ -33,24 +33,33 @@ const Advertisement = () => {
   }, []);
 
   useEffect(() => {
+    let isMounted = true; // Track component mount status to prevent state updates on unmounted components
+
     const fetchAdvertisements = async () => {
       try {
-        const response = await axios.get(
+        const { data } = await axios.get(
           "https://www.charithamunasinghe.lk/api/admin/"
         );
-        if (response.data.message === "Advertisements fetched successfully") {
-          setAdvertisements(response.data.data);
+        if (
+          data.message === "Advertisements fetched successfully" &&
+          isMounted
+        ) {
+          setAdvertisements(data.data);
         } else {
           console.error("Failed to fetch advertisements.");
         }
       } catch (error) {
         console.error("Error fetching advertisements:", error);
       } finally {
-        setLoading(false);
+        if (isMounted) setLoading(false); // Ensure setLoading is only called when component is mounted
       }
     };
 
     fetchAdvertisements();
+
+    return () => {
+      isMounted = false; // Cleanup to prevent memory leaks
+    };
   }, []);
 
   useEffect(() => {
