@@ -67,7 +67,7 @@ export default function Video() {
   const currentContent = content[language];;
 
   return (
-    <div className="container relative mx-auto flex flex-col items-center justify-center h-screen md:my-40 mt-32 mb-10 w-screen">
+    <div className="container relative mx-auto flex flex-col items-center justify-center h-screen mt-32 mb-10 w-screen">
       {/* Header */}
       <motion.div
         className="text-center flex flex-col justify-center items-center"
@@ -87,9 +87,13 @@ export default function Video() {
       {/* video carousel */}
       <div className="container relative mx-auto mt-20 flex flex-col items-center justify-center h-screen w-screen">
 
-        <div
+        <motion.div
           className="relative flex items-center justify-center w-full h-[500px]"
           style={{ perspective: "1000px" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           {videos.map((video, index) => (
             <motion.div
@@ -114,7 +118,7 @@ export default function Video() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Arrow Icons */}
         <div className="flex justify-center gap-20 mt-8">
