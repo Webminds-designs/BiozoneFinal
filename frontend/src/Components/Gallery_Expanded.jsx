@@ -983,7 +983,7 @@ export default function App() {
                     <img
                       src={Img39}
                       alt="image1"
-                      className="absolute object-cover w-full h-AUTO -top-56"
+                      className="absolute object-cover w-full "
                     />
                   </PhotoView>
                 </motion.div>
