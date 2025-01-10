@@ -2,12 +2,12 @@ const videoContent = {
     en: {
       title: "Accolades",
       subtitle: "Showcasing our proud achievements",
-      description: "Discover the milestones we’ve achieved and the recognition we've earned on our journey to excellence",
+      description: "Awarded for the People's Pinnacle most outstanding sinhala & english medium teacher for the year 2024",
     },
     si: {
       title: "ප්‍රශංසා",
       subtitle: "අපගේ අභිමානවත් ජයග්‍රහණ",
-      description: "අපගේ විශිෂ්ටත්වය කරා යන ගමනේදී අප අත්කර ගත් සන්ධිස්ථාන සහ අප ලබා ඇති පිළිගැනීම සොයා ගන්න",
+      description: "People's Pinnacle 2024 වසරේ විශිෂ්ඨතම සිංහල හා ඉංග්‍රීසි මාධ්‍ය ගුරුවරයාට හිමි සම්මානයෙන් මෙසේ පිදුම් ලැබූ වගයි",
     },
   };
   
