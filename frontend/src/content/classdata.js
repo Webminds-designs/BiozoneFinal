@@ -31,7 +31,7 @@ const classData = {
 		},
 		{
 			locationName: "Shakthi Bambalapitiya",
-			address: "Galle Rd, Colombo 00500",
+			address: "333, Galle Rd, Colombo 00500",
 			addressLink:
 				"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.056105129528!2d79.858679!3d6.883883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bc4144f82c9%3A0x23e8ba26fca564e4!2sShakthi%20Institute!5e0!3m2!1sen!2slk!4v1734604127472!5m2!1sen!2slk",
 			classes: [
@@ -75,7 +75,7 @@ const classData = {
 		},
 		{
 			locationName: "Siyochem Nugegoda",
-			address: "26 Poorwarama Rd, Nugegoda 00600",
+			address: "26, Poorwarama Rd, Nugegoda 00600",
 			addressLink:
 				"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.60893283107!2d79.897347!3d6.872356!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a461503567f%3A0x7a2f1e1e274d8758!2sSiyochem!5e0!3m2!1sen!2slk!4v1734604943245!5m2!1sen!2slk",
 			classes: [
@@ -135,7 +135,7 @@ const classData = {
 		},
 		{
 			locationName: "Shakthi බම්බලපිටිය",
-			address: "ගාලු පාර, කොළඹ 00500",
+			address: "333, ගාලු පාර, කොළඹ 00500",
 			addressLink:
 				"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.056105129528!2d79.858679!3d6.883883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bc4144f82c9%3A0x23e8ba26fca564e4!2sShakthi%20Institute!5e0!3m2!1sen!2slk!4v1734604127472!5m2!1sen!2slk",
 			classes: [
