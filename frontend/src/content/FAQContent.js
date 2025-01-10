@@ -16,7 +16,7 @@ const faqContent = {
 			},
 			{
 				q: "How are classes conducted?",
-				a: "Classes are conducted online through live video sessions.",
+				a: "Classes are conducted online through live video sessions or in person at the institutes mentioned above.",
 			},
 			{
 				q: "Can I download course materials?",
@@ -37,7 +37,7 @@ const faqContent = {
 		questions: [
 			{
 				q: "BioZone යනු කුමක්ද?",
-				a: "BioZone යනූ ජීව විද්‍යා පන්ති (online හා භෞතික) පවත්වනු ලබන ස්තානයකි,එමෙන්ම විවිධ අධ්‍යාපනික සම්පත් සහ සහාය ලබා දෙන වෙබ් අඩවියකි.",
+				a: "BioZone යනූ ජීව විද්‍යා පන්ති (online හා භෞතික) පවත්වනු ලබන, විවිධ අධ්‍යාපනික සම්පත් සහ සහාය ලබා දෙන වෙබ් අඩවියකි.",
 			},
 
 			{
@@ -46,7 +46,7 @@ const faqContent = {
 			},
 			{
 				q: "පන්ති පැවැත්වෙන්නේ කෙසේද?",
-				a: "පන්ති සජීවී වීඩියෝ සැසි හරහා මාර්ගගතව පැවැත්වේ.",
+				a: "පන්ති online සැසි හරහා ද භෞතිකව ඉහත ආයතනයන් හීදි ද පැවැත්වේ.",
 			},
 			{
 				q: "පාඨමාලා ද්‍රව්‍ය බාගත කළ හැකිද?",
