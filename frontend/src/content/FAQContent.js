@@ -7,12 +7,12 @@ const faqContent = {
 		questions: [
 			{
 				q: "What is BioZone?",
-				a: "BioZone is a platform that provides various educational resources and support.",
+				a: "BioZone is a platform which conducts english & sinhala medium classes, both physically and online. Also provides various educational resources and support.",
 			},
 
 			{
 				q: "How do I enroll for classes?",
-				a: "You can enroll by visiting our website and signing up.",
+				a: "You can enroll by visiting our website and signing up, or through any of the institutes mentioned above.",
 			},
 			{
 				q: "How are classes conducted?",
@@ -37,12 +37,12 @@ const faqContent = {
 		questions: [
 			{
 				q: "BioZone යනු කුමක්ද?",
-				a: "BioZone යනු විවිධ අධ්‍යාපනික සම්පත් සහ සහාය ලබා දෙන වෙබ් අඩවියකි.",
+				a: "BioZone යනූ ජීව විද්‍යා පන්ති (online හා භෞතික) පවත්වනු ලබන ස්තානයකි,එමෙන්ම විවිධ අධ්‍යාපනික සම්පත් සහ සහාය ලබා දෙන වෙබ් අඩවියකි.",
 			},
 
 			{
 				q: "පන්ති සඳහා ලියාපදිංචි වන්නේ කෙසේද?",
-				a: "ඔබට අපගේ වෙබ් අඩවියට පිවිස ලියාපදිංචි වීමෙන් පන්ති සඳහා ලියාපදිංචි විය හැක.",
+				a: "ඔබට අපගේ වෙබ් අඩවියට පිවිස ලියාපදිංචි වීමෙන් පන්ති සඳහා ලියාපදිංචි විය හැක, නැතහොත් ඉහත සඳහන් කිනම් හෝ ආයතනයකට පැමින ලියාපදිංචි විය හැක.",
 			},
 			{
 				q: "පන්ති පැවැත්වෙන්නේ කෙසේද?",
@@ -54,7 +54,7 @@ const faqContent = {
 			},
 			{
 				q: "පන්තියක් සඳහා ගෙවීම් කරන ආකාරය කුමක්ද?",
-				a: "ඔබට බැංකු කාඩ්පත්, ගෙවීම් පෝටලය හෝ බැංකු ගිණුමට මුදල් යැවීම හරහා ගෙවීම් කළ හැක.",
+				a: "ඔබට බැංකු කාඩ්පත්, ගෙවීම් portal හෝ බැංකු ගිණුමට මුදල් යැවීම හරහා ගෙවීම් කළ හැක.",
 			},
 			// ...more questions
 		],
