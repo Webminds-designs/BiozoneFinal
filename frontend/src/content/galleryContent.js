@@ -15,13 +15,13 @@ const galleryContent = {
 	},
 	si: {
 		gallery: "ගැලරිය",
-		chatToTeam: "මතක අවකාශය",
+		chatToTeam: "මතකාවර්ජනය",
 		witness:
-			"ඉගෙනීම සජීවීව පැවැත්වෙන පන්ති සැසිවල සහ ප්‍රායෝගික ක්‍රියාකාරකම් තුළ සිසුන්ගේ වර්ධනය සහ උසස්වීම නරඹන්න",
-		completedJourney: "සම්පූර්ණ ගමන",
+			"ඉගෙනීම සජීවීව පැවැත්වෙන පන්ති සැසිවල සිසුන්ගේ වර්ධනය අත්විදින්න",
+		completedJourney: "මෙතෙක් ගමන",
 		positiveFeedback: "ධනාත්මක ප්‍රතිචාර",
 		inspiringMoments: "උද්වෙගකාර මොහොත",
-		galleryView: "ගැලරි දසුන්",
+		galleryView: "දසුන්",
 		resgisteduser: "ලියාපදිංචි පරිශීලකයින්",
 		Loadmore: "තවත් බලන්න",
 		backto: "මුල් පිටුවට ආපසු",
