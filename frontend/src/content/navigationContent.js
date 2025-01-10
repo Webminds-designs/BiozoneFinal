@@ -4,7 +4,7 @@ const content = {
     onlineStudentPortal: "Online Student Portal",
   },
   si: {
-    navLinks: ["මුල් පිටුව", "ස්ථාන", "ගැලරිය", "අප අමතන්න"],
+    navLinks: ["මුල් පිටුව", "ආයතන", "ගැලරිය", "විමසීම්"],
     onlineStudentPortal: "මාර්ගගත ශිෂ්‍ය පෝර්ටලය",
   },
 };
