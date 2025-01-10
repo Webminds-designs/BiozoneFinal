@@ -38,7 +38,7 @@ const Advertisement = () => {
     const fetchAdvertisements = async () => {
       try {
         const { data } = await axios.get(
-          "https://www.charithamunasinghe.lk/api/admin/"
+          "https://charithamunasinghe.lk/api/admin/"
         );
         if (
           data.message === "Advertisements fetched successfully" &&

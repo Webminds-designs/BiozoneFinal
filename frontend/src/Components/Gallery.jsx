@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSpring, animated } from "react-spring"; // Import react-spring for animation
 import { motion } from "framer-motion";
-import Img1 from "../Assest/Web_Images/1.jpg";
+import Img1 from "../Assest/Web_Images/066.jpg";
 import Img2 from "../Assest/Web_Images/12.jpg";
 import Img3 from "../Assest/Web_Images/16.jpg";
 import Img4 from "../Assest/Web_Images/20.jpg";
 import Img5 from "../Assest/Web_Images/15.jpg";
 import Img6 from "../Assest/Web_Images/31.jpg";
-import Img7 from "../Assest/Web_Images/17.jpg";
+import Img7 from "../Assest/Web_Images/33.jpg";
 import Img8 from "../Assest/Web_Images/37.jpg";
 import Img9 from "../Assest/Web_Images/9.jpg";
 import content from "../content/galleryContent";
