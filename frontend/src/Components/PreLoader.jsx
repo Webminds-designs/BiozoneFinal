@@ -13,12 +13,16 @@ const PreLoader = ({ onLoaded }) => {
   }, [onLoaded]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen relative">
+    <div
+      className="flex items-center justify-center min-h-screen relative"
+      loading="lazy"
+    >
       {/* Background Image */}
       <img
         src={bgimage}
         alt="Background DNA sample"
         className="absolute left-0 bottom-0 -z-10 animate-orbit"
+        loading="lazy"
       />
       <div className="text-center relative z-10">
         {/* Logo with Animation */}
@@ -31,6 +35,7 @@ const PreLoader = ({ onLoaded }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          loading="lazy"
         />
         <h1 className="text-2xl font-bold text-green-600 mb-2">BIOZONE</h1>
         <p className="text-gray-600 mb-6">Loading...</p>
