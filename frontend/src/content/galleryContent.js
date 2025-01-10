@@ -20,7 +20,7 @@ const galleryContent = {
 			"ඉගෙනීම සජීවීව පැවැත්වෙන පන්ති සැසිවල සිසුන්ගේ වර්ධනය අත්විදින්න",
 		completedJourney: "මෙතෙක් ගමන",
 		positiveFeedback: "ධනාත්මක ප්‍රතිචාර",
-		inspiringMoments: "උද්වෙගකාර මොහොත",
+		inspiringMoments: "ජයග්‍රාහී අවස්තාවන්",
 		galleryView: "දසුන්",
 		resgisteduser: "ලියාපදිංචි පරිශීලකයින්",
 		Loadmore: "තවත් බලන්න",
