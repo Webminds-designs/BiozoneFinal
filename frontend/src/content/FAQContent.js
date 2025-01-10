@@ -24,7 +24,7 @@ const faqContent = {
 			},
 			{
 				q: "How do I pay for a class?",
-				a: "You can pay via credit card, PayPal, or bank transfer.",
+				a: "You can pay via Bank Cards, Payment gateway, or bank transfer.",
 			},
 			// ...more questions
 		],
