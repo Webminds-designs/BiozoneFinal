@@ -1,8 +1,11 @@
-import bcrypt from "bcryptjs";
-import AdminModel from "../models/model.admin.js"; // Path to your AdminMode
+// import bcrypt from "bcryptjs";
+// import AdminModel from "../models/model.admin.js"; // Path to your AdminMode
+
+const AdminModel = require("../models/model.admin");
+const bcrypt = require("bcryptjs");
 
 // Register  new admin
-export const registerAdmin = async (req, res) => {
+exports.registerAdmin = async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -27,7 +30,7 @@ export const registerAdmin = async (req, res) => {
 };
 
 //  admin login
-export const loginAdmin = async (req, res) => {
+exports.loginAdmin = async (req, res) => {
   const { email, password } = req.body;
 
   try {

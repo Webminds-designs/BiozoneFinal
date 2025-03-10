@@ -62,9 +62,10 @@ const Text = () => {
               >
                 {/*  Row - total Column */}
                 <p className="text-5xl text-start md:text-[80px] lg:text-[120px] font-serif text-gray-700 leading-none">
-                  {currentContent.title2}
+                  ජීව විද්‍යාව
                 </p>
               </motion.div>
+
               <motion.div
                 className="flex flex-col md:flex-row text-justify items-center gap-20  w-full"
                 initial={{ opacity: 0, y: 50 }}
@@ -75,15 +76,15 @@ const Text = () => {
               >
                 {/*  Row - total Column */}
                 <p
-                  className="text-gray-900 text-justify text-base md:text-lg lg:text-xl max-w-full md:max-w-[500px] lg:w-1/3 animate-orbit6 gap-20 font-thin"
+                  className="text-gray-900 text-justify text-base md:text-lg lg:text-xl max-w-full md:max-w-[500px] lg:w-full animate-orbit6 gap-20 font-thin"
                   initial={{ opacity: 0, x: 0, y: 0 }}
                   animate={{ opacity: 1, x: -360, y: 440 }}
                   transition={{ duration: 2.8, ease: "easeInOut" }}
                 >
                   {currentContent.description3}
                 </p>
-                <p className="text-5xl md:text-[80px] text-right lg:text-[120px] font-serif text-gray-700 leading-none">
-                  තාක්ෂණය
+                <p className="text-5xl md:text-[80px] w-full text-center lg:text-[120px] font-serif text-gray-700 leading-none">
+                  සහ
                 </p>
               </motion.div>
               <motion.div
@@ -122,11 +123,28 @@ const Text = () => {
                   animate={{ opacity: 1, x: -360, y: 440 }}
                   transition={{ duration: 2.8, ease: "easeInOut" }}
                 >
-                  {currentContent.description1}
+                  {currentContent.description5}
                 </p>
                 <h1 className="text-5xl md:text-[80px] lg:text-[120px] font-serif text-gray-700 ">
                   {currentContent.title1}
                 </h1>
+              </motion.div>
+              <motion.div
+                className="flex flex-col md:flex-row justify-between items-center w-full"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {/* 4th Row - total Column */}
+                <p
+                  className="text-gray-900 text-center md:text-lg lg:text-xl max-w-full md:max-w-[500px] lg:max-w-full animate-orbit4 delay-[400ms] font-thin"
+                  initial={{ opacity: 0, x: 0, y: 0 }}
+                  animate={{ opacity: 1, x: -360, y: 440 }}
+                  transition={{ duration: 2.8, ease: "easeInOut" }}
+                >
+                  {currentContent.description6}
+                </p>
               </motion.div>
             </div>
 
@@ -172,7 +190,7 @@ const Text = () => {
                     animate={{ opacity: 1, x: -360, y: 440 }}
                     transition={{ duration: 2.8, ease: "easeInOut" }}
                   >
-                    {currentContent.description3}
+                    {currentContent.description5}
                   </p>
                   <p
                     className="text-gray-900  text-sm md:text-lg font-thin lg:text-xl max-w-full text-center md:max-w-[500px] lg:max-w-full animate-orbit4 delay-[400ms]"

@@ -42,7 +42,7 @@ const Landing = ({ mapref }) => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div
-          className="text-[13px] xl:text-[15px] 2xl:text-[16px] flex items-center justify-center -mb-4 text-primary1 border-[1.5px] lg:border-2 bg-white border-primary1 rounded-[4px]  lg:rounded-[8px] h-[28px] w-auto transition-all duration-200 ease-linear px-2"
+          className="text-[13px] xl:text-[15px] 2xl:text-[16px] flex items-center justify-center -mb-4 text-primary1 border-[1.5px] lg:border-2 bg-white border-primary1 rounded-[4px]  lg:rounded-[8px] py-1 w-auto transition-all duration-200 ease-linear px-2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -114,7 +114,9 @@ const Landing = ({ mapref }) => {
 
         {/* Glass Effect Cards */}
         <motion.div
-          className="absolute z-30 flex flex-col lg:-top-10 lg:-left-15 top-5 -left-2 justify-center  text-primary1 items-center rounded-[8px]  w-[120px] h-[60px] lg:w-[140px] lg:h-[80px] bg-[#FFFFFF99] backdrop-blur-[30px] shadow-[0px_4px_34.6px_0px_#0000001A] animate-orbit"
+          className="absolute z-30 flex flex-col lg:-top-10 lg:-left-15 -top-10 -left-5 justify-center  text-primary1 items-center rounded-[8px] 
+          md:w-[180px] w-[120px]  h-fit p-2
+           bg-[#FFFFFF99] backdrop-blur-[30px] shadow-[0px_4px_34.6px_0px_#0000001A] animate-orbit text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.7 }}
@@ -132,25 +134,25 @@ const Landing = ({ mapref }) => {
           </h1>
         </motion.div>
         <motion.div
-          className="absolute z-30 flex flex-row items-center justify-center bottom-4 lg:bottom-10 -left-10 lg:-left-28 text-primary1  rounded-[8px] w-[240px] h-[70px] lg:w-[312px] lg:h-[91px] bg-[#FFFFFF99] backdrop-blur-[30px] shadow-[0px_4px_34.6px_0px_#0000001A] animate-orbit2"
+          className="absolute z-30 flex flex-row items-center justify-center bottom-4 lg:bottom-10 -left-10 lg:-left-28 text-primary1  rounded-[8px] w-[300px] h-[70px] lg:w-[400px]  bg-[#FFFFFF99] backdrop-blur-[30px] shadow-[0px_4px_34.6px_0px_#0000001A] animate-orbit2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <h1
-            className={`text-[28px] xl:text-[36px] 2xl:text-[40px] ${
+            className={`text-[28px] xl:text-[36px] p-2 2xl:text-[40px] ${
               language === "si" ? "font-reddit" : ""
             }`}
           >
             +4
           </h1>
           <div className="h-[70%] w-[1.5px] bg-primaryHover1 mx-4"></div>
-          <div className="flex flex-col items-center justify-center text-center text-primary1 w-[140px] lg:w-[193px]">
+          <div className="flex flex-col items-center justify-center text-center text-primary1 p-2 w-[350px]">
             <h1 className="text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold">
               {currentContent.institutes}
             </h1>
-            <p className="text-[13px] w-[80%] lg:w-auto xl:text-[15px] 2xl:text-[16px] font-thin">
+            <p className="text-[13px] w-full lg:w-auto xl:text-[15px] 2xl:text-[16px] font-thin">
               {currentContent.institutesDescription}
             </p>
           </div>
