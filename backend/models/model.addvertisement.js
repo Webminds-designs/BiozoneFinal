@@ -1,4 +1,6 @@
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
+
+const mongoose = require("mongoose");
 
 const advertisementSchema = new mongoose.Schema({
   title: {
@@ -22,5 +24,6 @@ const advertisementSchema = new mongoose.Schema({
   },
 });
 
-const Advertisement = mongoose.model('Advertisement', advertisementSchema);
-export default Advertisement;
+const Advertisement = mongoose.model("Advertisement", advertisementSchema);
+// export default Advertisement;
+module.exports = Advertisement;

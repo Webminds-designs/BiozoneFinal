@@ -12,6 +12,7 @@ import Img8 from "../Assest/Web_Images/37.jpg";
 import Img9 from "../Assest/Web_Images/9.jpg";
 import content from "../content/galleryContent";
 import { SecondaryButton } from "./Elements/Buttons";
+import { FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Gallery = () => {
@@ -177,14 +178,25 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <p className="text-2xl text-center">
+                {language === "si" ? (
+                  <div className="flex items-center justify-center">
+                    වසර 10 <FaPlus className="text-sm w-fit" />
+                  </div>
+                ) : (
+                  ""
+                )}
                 {currentContent.completedJourney}
                 <br />
                 <br />
-                <animated.span
-                  className={`${language === "si" ? "font-poppins" : ""}`}
-                >
-                  {animatedCounter1.number.to((n) => `${n.toFixed(0)}Y+`)}
-                </animated.span>
+                {language != "si" ? (
+                  <animated.span
+                    className={`${language === "si" ? "font-poppins" : ""}`}
+                  >
+                    {animatedCounter1.number.to((n) => `${n.toFixed(0)}Y+`)}
+                  </animated.span>
+                ) : (
+                  <></>
+                )}
               </p>
             </motion.div>
 
@@ -277,14 +289,22 @@ const Gallery = () => {
               onMouseEnter={() => setHoveredIndex(5)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <p className="mb-12 text-4xl font-semibold text-center">
+              <p
+                className={`mb-12 font-semibold text-center ${
+                  language === "si" ? "text-2xl" : "text-4xl"
+                }`}
+              >
                 {currentContent.inspiringMoments}
               </p>
-              <p className="text-xl text-center">
-                {currentContent.witness}
-                <br />
-                {currentContent.activities}
-              </p>
+              {language != "si" ? (
+                <p className="text-xl text-center">
+                  {currentContent.witness}
+                  <br />
+                  {currentContent.activities}
+                </p>
+              ) : (
+                <> </>
+              )}
             </motion.div>
 
             {/* 8 */}
@@ -358,14 +378,19 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <p className="text-2xl text-center">
-                {currentContent.galleryView}
-                <br />
-
-                <animated.span
-                  className={`${language === "si" ? "font-poppins" : ""}`}
-                >
-                  {animatedCounter3.number.to((n) => `${n.toFixed(0)}+`)}
-                </animated.span>
+                {language === "si" ? (
+                  ""
+                ) : (
+                  <>
+                    {currentContent.galleryView}
+                    <br />
+                    <animated.span
+                      className={`${language === "si" ? "font-poppins" : ""}`}
+                    >
+                      {animatedCounter3.number.to((n) => `${n.toFixed(0)}+`)}
+                    </animated.span>
+                  </>
+                )}
               </p>
             </motion.div>
 
@@ -514,13 +539,24 @@ const Gallery = () => {
               viewport={{ once: true, amount: 0.1 }}
             >
               <p className="text-2xl text-center">
+                {language === "si" ? (
+                  <div className="flex items-center justify-center">
+                    වසර 10 <FaPlus className="text-sm w-fit" />
+                  </div>
+                ) : (
+                  ""
+                )}
                 {currentContent.completedJourney}
                 <br />
-                <animated.span
-                  className={`${language === "si" ? "font-poppins" : ""}`}
-                >
-                  {animatedCounter1.number.to((n) => `${n.toFixed(0)}Y+`)}
-                </animated.span>
+                {language != "si" ? (
+                  <animated.span
+                    className={`${language === "si" ? "font-poppins" : ""}`}
+                  >
+                    {animatedCounter1.number.to((n) => `${n.toFixed(0)}Y+`)}
+                  </animated.span>
+                ) : (
+                  <></>
+                )}
               </p>
             </motion.div>
 
@@ -562,14 +598,22 @@ const Gallery = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
               viewport={{ once: true, amount: 0.1 }}
             >
-              <p className="mb-5 text-[22px] font-semibold text-center">
+              <p
+                className={`mb-5 text-[22px] font-semibold text-center ${
+                  language === "si" ? "text-2xl" : "text-4xl"
+                }`}
+              >
                 {currentContent.inspiringMoments}
               </p>
-              <p className="text-[16px] text-center font-thin">
-                {currentContent.witness}
-                <br />
-                {currentContent.activities}
-              </p>
+              {language != "si" ? (
+                <p className="text-xl text-center">
+                  {currentContent.witness}
+                  <br />
+                  {currentContent.activities}
+                </p>
+              ) : (
+                <> </>
+              )}
             </motion.div>
 
             {/* 8 */}

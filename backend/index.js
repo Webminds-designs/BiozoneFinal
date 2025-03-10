@@ -1,11 +1,20 @@
-import express from "express";
-import mongoose from "mongoose";
-import * as dotenv from "dotenv";
-import bodyParser from "body-parser";
-import cors from "cors";
-import Routes from "./router/router.js";
-import adminRoutes from "./router/Adminroutes.js"; // Fixed path
-import emailRoutes from "./router/emailRoutes.js"; // Fixed path
+// import express from "express";
+// import mongoose from "mongoose";
+// import * as dotenv from "dotenv";
+// import bodyParser from "body-parser";
+// import cors from "cors";
+// import Routes from "./router/router.js";
+// import adminRoutes from "./router/Adminroutes.js"; // Fixed path
+// import emailRoutes from "./router/emailRoutes.js"; // Fixed path
+
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const Routes = require("./router/router");
+const adminRoutes = require("./router/Adminroutes");
+const emailRoutes = require("./router/emailRoutes");
 
 dotenv.config();
 
@@ -15,7 +24,11 @@ const MONGO_URL = process.env.mongodbURL;
 
 // CORS Configuration
 const corsOptions = {
-  origin: "https://www.charithamunasinghe.lk", // Allow only your frontend domain
+  origin: [
+    "https://www.charithamunasinghe.lk",
+    "https://charithamunasinghe.lk",
+  ],
+  // Allow only your frontend domain
 
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allowed methods
   credentials: true, // Allow cookies and credentials
@@ -57,4 +70,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Internal Server Error" });
 });
 
-export default app;
+module.exports = app;

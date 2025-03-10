@@ -145,7 +145,7 @@ const Map = () => {
               title="Map"
             />
 
-            <div className="absolute  bg-[#FFFFFF99] backdrop-blur-[5px] lg:p-4 bottom-0 rounded-[16px] w-screen lg:w-5/12 -mb-5 lg:mb-0 2xl:w-5/12 h-[400px] lg:h-[450px] lg:top-1/2 lg:right-5 transform  pb-5 lg:pb-0 translate-y-* lg:-translate-y-1/2 flex items-center justify-center shadow-lg">
+            <div className="absolute  bg-[#FFFFFF99] backdrop-blur-[5px] lg:p-4 bottom-0 rounded-[16px] w-screen lg:w-5/12 -mb-5 lg:mb-0 2xl:w-5/12  lg:h-fit lg:top-1/2 lg:right-5 transform  pb-5 lg:pb-0 translate-y-* lg:-translate-y-1/2 flex items-center justify-center shadow-lg">
               <div className="relative  overflow-hidden w-full px-4 lg:w-11/12">
                 {/* Location Name and Address */}
                 <div

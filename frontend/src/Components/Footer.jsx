@@ -199,7 +199,30 @@ const Footer = ({ homeRef, locationsRef, galleryRef, contactRef }) => {
                   {currentContent.featureLinks.map((link, index) => (
                     <li key={index}>
                       <a
-                        href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                        href={
+                          link === "Photos" || link === "ඡායාරූප"
+                            ? "https://klnaclk-my.sharepoint.com/:f:/g/personal/yashodh-ec20066_stu_kln_ac_lk/EnJoMtny3zNEhKQP5H5ds5EBjE5DJT-hi-mH_0MBSQxT8w?e=mHz7bl"
+                            : link === "Timetable"
+                            ? undefined
+                            : `#${link.toLowerCase().replace(/\s+/g, "-")}`
+                        }
+                        onClick={
+                          link === "Timetable"
+                            ? () => scrollToSection(locationsRef)
+                            : link === "Resources"
+                            ? () => scrollToSection(locationsRef)
+                            : () => scrollToSection(locationsRef)
+                        }
+                        target={
+                          link === "Photos" || link === "ඡායාරූප"
+                            ? "_blank"
+                            : undefined
+                        }
+                        rel={
+                          link === "Photos" || link === "ඡායාරූප"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className="relative hover:text-primary3 group"
                       >
                         {link}

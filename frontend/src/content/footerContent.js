@@ -9,14 +9,14 @@ const content = {
     socials: "Socials",
     socialLinks: ["Facebook", "Instagram", "Youtube", "TikTok"],
     features: "Features",
-    featureLinks: ["Timetable", "Theory", "Papers", "Revision"],
+    featureLinks: ["Timetable", "Resources", "Photos"],
     newsletter:
       "Stay tuned with the latest news and offers! Send us your email, and we'll keep you informed.",
     enterEmail: "Enter your email",
     submit: "Submit",
   },
   si: {
-    readyToElevate: "ඔබේ ජීව විද්‍යා දැනුම ගෝලීය මට්ටමට උසස් කිරීමට සූදානම්ද",
+    readyToElevate: "ඔබගේ ජීව විද්‍යා දැනුම නව මානයකට ගෙන යාමට ඔබ සූදානම්ද",
     startJourney: "ඔබේ ජීව විද්‍යා ගමන අදම ආරම්භ කරන්න",
     onlineStudentPortal: "මාර්ගගත ශිෂ්‍ය පෝර්ටලය",
     viewTimetables: "කාලසටහන් බලන්න",
@@ -25,9 +25,9 @@ const content = {
     socials: "සමාජ මාධ්‍ය",
     socialLinks: ["Facebook", "Instagram", "Youtube", "Tiktok"],
     features: "විශේෂාංග",
-    featureLinks: ["කාලසටහන්", "න්‍යයාය", "ප්‍රශ්න පත්‍ර", "සංශෝධන"],
+    featureLinks: ["කාලසටහන්", "සම්පත්", "ඡායාරූප"],
     newsletter:
-      "නවතම පුවත් සහ දීමනා සමඟ සම්බන්ධව සිටින්න! ඔබේ විද්‍යුත් තැපෑල අපට එවන්න, අපි ඔබට දැනුම් දෙන්නෙමු.",
+      "විද්‍යුත් තැපෑල ඔස්සේ නවතම පුවත් සහ දීමනා පිළිබඳ යාවත්කාලීන වන්න! ඔබගේ විද්‍යුත් තැපැල් ලිපිනය අපට ලබා දෙන්න.",
     enterEmail: "ඔබේ විද්‍යුත් තැපෑල ඇතුළත් කරන්න",
     submit: "ඉදිරිපත් කරන්න",
   },
