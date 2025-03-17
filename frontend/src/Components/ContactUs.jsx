@@ -153,9 +153,8 @@ const ContactUs = () => {
 
   return (
     <div
-      className={`relative w-full flex items-center justify-center overflow-hidden ${
-        language === "si" ? "font-indumathi" : ""
-      }`}
+      className={`relative w-full flex items-center justify-center overflow-hidden ${language === "si" ? "font-indumathi" : ""
+        }`}
     >
       <div className="px-4 md:px-10 lg:px-10 xl:px-52 relative h-auto lg:h-full md:h-full flex items-center justify-center">
         {/* Container */}
@@ -310,16 +309,17 @@ const ContactUs = () => {
                 <span className="text-primary1 text-3xl absolute top-4 left-4 sm:top-5 sm:left-5">
                   <IoCallOutline />
                 </span>
-                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-5">
+                <div className="absolute bottom-4 left-4 sm:bottom-4 sm:left-5">
                   <p className="text-black font-semibold text-sm sm:font-medium">
                     {content.contactMethods.call}
                   </p>
                   <p className="text-black font-light text-xs sm:text-sm opacity-70">
-                    <span
-                      className={`${language === "si" ? "font-poppins" : ""}`}
-                    >
-                      +94 77 721 9676
+                    <span className={`grid sm:grid-cols-2 grid-cols-3  gap-x-4 ${language === "si" ? "font-poppins" : ""}`}>
+                      <span className="sm:text-[12px] text-[10px]">+94 77 721 9676</span>
+                      <span className="sm:text-[12px] text-[10px]">+94 77 759 0796</span>
+                      <span className="sm:text-[12px] text-[10px]">+94 71 695 4387</span>
                     </span>
+
                   </p>
                 </div>
               </div>
