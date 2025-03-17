@@ -105,7 +105,7 @@ const Map = () => {
                   language === "si" ? "font-reddit" : ""
                 }`}
               >
-                <h2 className="text-[20px] xl:text-[24px] 2xl:text-[26px] text-[#090909] font-[500]">
+                <h2 className="text-[16px] xl:text-[20px] 2xl:text-[19px] text-[#090909] font-[500]">
                   {institute.locationName}
                 </h2>
                 <p className="text-[14px] xl:text-[15px] 2xl:text-[16px] font-normal text-[#606060]">
@@ -153,7 +153,7 @@ const Map = () => {
                     language === "si" ? "font-reddit" : ""
                   }`}
                 >
-                  <div className="font-medium text-[18px] xl:text-[22px] 2xl:text-[24px]">
+                  <div className="font-medium text-[16px] xl:text-[20px] 2xl:text-[22px]">
                     {selectedTimetable.locationName}
                   </div>
                   <div>
@@ -175,21 +175,19 @@ const Map = () => {
                       viewport={{ once: true, amount: 0 }}
                     >
                       {/* Class Details */}
-                      <div className="bg-gradient-to-r from-primary2 to-primary1 text-white p-3 rounded-lg w-7/12">
+                      <div className="bg-gradient-to-r from-primary2 to-primary1 text-white p-3 rounded-lg w-8/12">
                         <div
                           className={`flex justify-between w-full ${
                             language === "si" ? "font-reddit" : ""
                           }`}
                         >
-                          <span className="font-medium text-[14px] xl:text-[16px] mt-[3px] 2xl:text-[18px] w-16">
+                          <span className="font-medium text-[14px] xl:text-[16px] mt-[3px] 2xl:text-[18px] ">
                             {classItem.classtype}
                           </span>
                           <span className="font-light text-[14px] xl:text-[16px] mt-1 2xl:text-[18px]">
                             {classItem.year}
                           </span>
-                          <span className="p-1 border border-solid border-white rounded-md pt-2 pl-2 pr-2 text-[10px] xl:text-[12px] 2xl:text-[14px]">
-                            {classItem.medium}
-                          </span>
+                         
                         </div>
                       </div>
                       {/* Class Time */}
