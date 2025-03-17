@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../Assest/Web_Images/CMBanner.jpg";
+import banner from "../Assest/Web_Images/CMBannernew.jpeg";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 const NewClass = () => {
