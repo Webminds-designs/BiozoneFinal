@@ -13,62 +13,64 @@ import VortextComponent from "../Components/VortextComponent";
 import Text from "../Components/Elements/Text";
 import { SecondaryButton } from "../Components/Elements/Buttons"; // Import SecondaryButton
 import Video from "../Components/Video";
+import NewClass from "../Components/NewClass";
 
 const Home = () => {
-	// Define refs for each section
-	const homeRef = useRef(null);
-	const locationsRef = useRef(null);
-	const galleryRef = useRef(null);
-	const contactRef = useRef(null);
+  // Define refs for each section
+  const homeRef = useRef(null);
+  const locationsRef = useRef(null);
+  const galleryRef = useRef(null);
+  const contactRef = useRef(null);
 
-	const location = useLocation();
+  const location = useLocation();
 
-	useEffect(() => {
-		const params = new URLSearchParams(location.search);
-		const lang = params.get("lang");
-		if (lang) {
-			localStorage.setItem("language", lang);
-		}
-	}, [location]);
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const lang = params.get("lang");
+    if (lang) {
+      localStorage.setItem("language", lang);
+    }
+  }, [location]);
 
-	const scrollToMap = () => {
-		locationsRef.current.scrollIntoView({ behavior: "smooth" });
-	};
+  const scrollToMap = () => {
+    locationsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
-	return (
-		<div className="flex flex-col max-w-[100vw] overflow-hidden">
-			<Navigation
-				homeRef={homeRef}
-				locationsRef={locationsRef}
-				galleryRef={galleryRef}
-				contactRef={contactRef}
-			/>
-			<div ref={homeRef}>
-				<Landing mapref={locationsRef} />
-			</div>
-			<div>
-				<Video />
-			</div>
-			<div ref={locationsRef}>
-				<Map />
-			</div>
-			<div ref={galleryRef}>
-				<Gallery />
-			</div>
-			<FAQ />
-			<Text />
-			<Advertisement />
-			<div ref={contactRef}>
-				<ContactUs />
-			</div>
-			<VortextComponent
-				homeRef={homeRef}
-				locationsRef={locationsRef}
-				galleryRef={galleryRef}
-				contactRef={contactRef}
-			/>
-		</div>
-	);
+  return (
+    <div className="flex flex-col max-w-[100vw] overflow-hidden">
+      <Navigation
+        homeRef={homeRef}
+        locationsRef={locationsRef}
+        galleryRef={galleryRef}
+        contactRef={contactRef}
+      />
+      <div ref={homeRef}>
+        <Landing mapref={locationsRef} />
+      </div>
+      <div>
+        <Video />
+      </div>
+      <NewClass />
+      <div ref={locationsRef}>
+        <Map />
+      </div>
+      <div ref={galleryRef}>
+        <Gallery />
+      </div>
+      <FAQ />
+      <Text />
+      <Advertisement />
+      <div ref={contactRef}>
+        <ContactUs />
+      </div>
+      <VortextComponent
+        homeRef={homeRef}
+        locationsRef={locationsRef}
+        galleryRef={galleryRef}
+        contactRef={contactRef}
+      />
+    </div>
+  );
 };
 
 export default Home;
