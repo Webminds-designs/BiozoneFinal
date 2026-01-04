@@ -133,7 +133,7 @@ const Map = () => {
         >
           <div className="bg-white lg:w-4/5 lg:h-5/6 w-full h-full  relative rounded-lg">
             <button
-              className="absolute  right-1 m-3  w-8 h-8 bg-white border border-solid border-gray-300 flex justify-center items-center rounded-full hover:bg-primaryHover1 hover:text-white"
+              className="absolute  right-1 m-3  w-8 h-8 bg-white border border-solid border-gray-300 flex justify-center items-center rounded-full hover:bg-primaryHover1 hover:text-white z-50"
               onClick={closeModal}
             >
               <VscChromeClose />
@@ -146,7 +146,7 @@ const Map = () => {
             />
 
             <div className="absolute  bg-[#FFFFFF99] backdrop-blur-[5px] lg:p-4 bottom-0 rounded-[16px] w-screen lg:w-5/12 -mb-5 lg:mb-0 2xl:w-5/12  lg:h-fit lg:top-1/2 lg:right-5 transform  pb-5 lg:pb-0 translate-y-* lg:-translate-y-1/2 flex items-center justify-center shadow-lg">
-              <div className="relative  overflow-hidden w-full px-4 lg:w-11/12">
+              <div className="relative  overflow-hidden w-full px-4 lg:w-11/12 py-3">
                 {/* Location Name and Address */}
                 <div
                   className={`text-2xl text-gray-800 mb-2 lg:mb-4 text-center p-2 ${
@@ -163,8 +163,8 @@ const Map = () => {
                   </div>
                 </div>
 
-                {/* Classes List */}
-                <div>
+                {/* Classes List - SCROLLABLE SECTION */}
+                <div className="max-h-[40vh] lg:max-h-[50vh] overflow-y-auto pr-2">
                   {selectedTimetable.classes.map((classItem, index) => (
                     <motion.div
                       key={index}
@@ -187,7 +187,6 @@ const Map = () => {
                           <span className="font-light text-[14px] xl:text-[16px] mt-1 2xl:text-[18px]">
                             {classItem.year}
                           </span>
-                         
                         </div>
                       </div>
                       {/* Class Time */}
